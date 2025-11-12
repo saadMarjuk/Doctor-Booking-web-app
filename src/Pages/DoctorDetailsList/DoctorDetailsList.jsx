@@ -26,12 +26,18 @@ const DoctorDetailsList = () => {
           checkup or urgent consultation, book appointments in minutes and
           receive quality care you can trust.
         </p>
-        <div className="mt-6">
+        <div className="mt-6 flex flex-wrap justify-center gap-8">
         <button
         onClick={() => navigate("/chatbot")}
         className="bg-blue-500 text-white px-6 py-3 rounded hover:bg-blue-600 transition-all duration-300"
        >
          Talk to AI Doctor Bot
+       </button>
+        <button
+        onClick={() => navigate("/location")}
+        className="bg-blue-500 text-white px-6 py-3 rounded hover:bg-green-600 transition-all duration-300"
+        >
+        See your Location to hospital 
        </button>
        </div>
       </div>

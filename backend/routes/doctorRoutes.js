@@ -15,7 +15,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage });
 
 // ✅ POST - Add a doctor
-router.post("/doctors", upload.single("image"), async (req, res) => {
+router.post("/", upload.single("image"), async (req, res) => {
   try {
     const doctorData = {
       name: req.body.name,
@@ -47,6 +47,19 @@ router.get("/", async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 });
+// DELETE - Remove a doctor by _id
+router.delete("/:id", async (req, res) => {
+  try {
+    const doctor = await Doctor.findByIdAndDelete(req.params.id);
+    if (!doctor) {
+      return res.status(404).json({ message: "Doctor not found" });
+    }
+    res.json({ message: "Doctor deleted successfully", doctor });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
 
 // ✅ GET - Single doctor by register number
 // Single doctor by register number

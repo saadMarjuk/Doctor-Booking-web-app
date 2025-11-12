@@ -5,7 +5,7 @@ import Bookings from "../Pages/Bookings/Bookings";
 import Blogs from "../Pages/Blogs/Blogs";
 import Contact from "../Pages/Contact/Contact";
 import Loader from "../UI/Loader";
-import DoctorDetails from "../Pages/DoctorDetails/DoctorDetails";
+//import DoctorDetails from "../Pages/DoctorDetails/DoctorDetails";
 import ErrorPage from "../UI/ErrorPage";
 import BookingForm from "../Pages/BookingForm/BookingForm";
 import AdminPanel from "../Pages/AdminPanel/AdminPanel";
@@ -15,7 +15,7 @@ import DoctorList from "../Pages/DoctorList/DoctorList";
 import DoctorDetailsList from "../Pages/DoctorDetailsList/DoctorDetailsList";
 import DoctorProfile from "../Pages/DoctorProfile.jsx/DoctorProfile";
 import DoctorChatbot from "../Pages/DoctorChatbot/DoctorChatbot";
-
+import Location from "../Pages/Location/Location";
 
 
 
@@ -90,6 +90,10 @@ export const router = createBrowserRouter([
       {
       path: "/chatbot",
       element: <DoctorChatbot />,
+      },
+      {
+       path: "/location",
+       element: <Location />,
       },
 
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router";
+import { NavLink } from "react-router-dom";
 import logoImage from "../assets/logo.png";
 import "../App.css";
 
@@ -60,7 +60,7 @@ const Navbar = () => {
               <NavLink to="/contact" className={navLinkClass}>
                 Contact Us
               </NavLink>
-              <NavLink to="/admin" className={navLinkClass}>Admin Panel</NavLink>
+              <NavLink to="/AdminDeshBord" className={navLinkClass}>Admin Panel</NavLink>
 
             </ul>
           </div>
@@ -95,7 +95,7 @@ const Navbar = () => {
                 Contact Us
               </span>
             </NavLink>
-            <NavLink to="/AdminPanel" className={navLinkClass}>
+            <NavLink to="/AdminDeshBord" className={navLinkClass}>
               <span className="hover:bg-[#2c2c2c18] rounded p-2">
                 Admin Panel
                   </span>

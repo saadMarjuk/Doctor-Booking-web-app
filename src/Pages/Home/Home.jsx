@@ -3,6 +3,7 @@ import Banner from "../../Components/Banner";
 import Counter from "../../Components/Counter";
 import { useLoaderData } from "react-router";
 import DoctorContainer from "../../Components/DoctorContainer";
+import DoctorDetailsList from "../DoctorDetailsList/DoctorDetailsList";
 
 const Home = () => {
   const data = useLoaderData();
@@ -30,7 +31,8 @@ const Home = () => {
     <div>
       <Banner handleSearch={handleSearch}></Banner>
 
-      <DoctorContainer data={searchedDoctor}></DoctorContainer>
+      {/*<DoctorContainer data={searchedDoctor}></DoctorContainer>*/}
+      <DoctorDetailsList />
 
       <Counter></Counter>
     </div>
